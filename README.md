@@ -1,7 +1,7 @@
 # java-fundamentals
 
 ## Repo for Labs of Java 401
-### Lab 1 : 10/10/2021
+### Lab 1 :  **Java primitives and control flow** _ 10/10/2021
 
 ***Basics / Main.java***
 
