@@ -1,7 +1,7 @@
 # java-fundamentals
 
 ## Repo for Labs of Java 401
-### Lab 1 : 
+### Lab 1 : 10/10/2021
 
 ***Basics / Main.java***
 
