@@ -35,6 +35,7 @@ public class Main{
             numOfFlip ++ ;
             if(randomNum < 0.5){
                 System.out.println("tails");
+                numOfHeads=0;
             }else {
                 System.out.println("heads");
                 numOfHeads ++;
