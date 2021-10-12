@@ -8,11 +8,30 @@ import java.util.*;
 public class Library {
     public static void main(String[] args) {
         // Call the functions
-        System.out.println(Arrays.toString(roll(4)));
-        System.out.println(containsDuplicates(new int[]{1,2, 6, 4, 5,1}));
-        System.out.println(calcAvg(new int[]{6,2,1}));
-        System.out.println(Arrays.toString(lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}})));
-    }
+//        System.out.println(Arrays.toString(roll(4)));
+//        System.out.println(containsDuplicates(new int[]{1,2, 6, 4, 5,1}));
+//        System.out.println(calcAvg(new int[]{6,2,1}));
+//        System.out.println(Arrays.toString(lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}})));
+        System.out.println(monthTemplate(new int[][]{
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        }));
+        ArrayList<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String winner = tally(votes);
+        System.out.println(winner + " received the most votes!");
+  }
 
 // -----------------------------------Functions-----------------------------------------------//
 
@@ -75,6 +94,53 @@ public class Library {
             }
         }
         return arr[indexofLow];
+
+    }
+
+    // ----------------------- Lab 3 Method ---------------------------
+
+    static String monthTemplate (int [][]arr){
+        HashSet<Integer> temHash = new HashSet<Integer>();
+        int low = arr[0][0];
+        int high = arr[0][0];
+        for (int i = 0 ; i< arr.length ; i++){
+            for (int j = 0 ; j< arr[i].length ; j++){
+                temHash.add(arr[i][j]);
+                if(low>arr[i][j]){low=arr[i][j];}
+                if(high<arr[i][j]){high=arr[i][j];}
+            }
+        }
+        String result = "High: "+ high + "\nLow: "+low;
+        for(int i =low ; i<high ; i++){
+            if(!temHash.contains(i)){
+                result+="\nNever saw temperature: "+i;
+            }
+        }
+        return result;
+
+
+    }
+
+    static String tally(ArrayList<String> list){
+        HashMap<String , Integer> voteHash = new HashMap<String,Integer>();
+
+        for(String item :list){
+            if(voteHash.get(item)==null){
+                voteHash.put(item,1);
+            }else{
+                int vote=voteHash.get(item)+1;
+                voteHash.put(item,vote);
+            }
+            }
+        int mostVote=0;
+        String winner = "";
+        for(String item: voteHash.keySet()){
+            if(voteHash.get(item)>mostVote){
+                mostVote=voteHash.get(item);
+                winner=item;
+            }
+        }
+        return winner;
 
     }
 

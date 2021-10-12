@@ -19,7 +19,7 @@
 
 -------
 
-### Lab 2 : 11/10/2021
+### Lab 2 : **Arrays, for loops, testing**_11/10/2021
 
 
 ***Basuclibrary / Library.java & LibraryTest.java***
@@ -34,3 +34,19 @@
   and calculates and returns the average of all the values in the array.
 * **lowAvg:** function take an array of arrays calculates the average value for each
   array and return the array with the lowest average.
+
+----------
+
+### Lab 3 : **Maps, File I/O, and Testing**_12/10/2021
+
+
+***Basuclibrary / Library.java & LibraryTest.java***
+
+> it contain 2 methods
+
+* **weatherTemplate:**  Using the October Seattle weather data above. Iterate through all of the data to find the min and max values. Use a HashSet of type Integer to keep track of all the unique temperatures seen. Finally, iterate from the min temp to the max temp and create a String containing any temperature 
+not seen during the month. Return that String.
+* **tally:** function that accepts a List of Strings representing votes and returns one string to show what got the most votes.
+
+----------
+
