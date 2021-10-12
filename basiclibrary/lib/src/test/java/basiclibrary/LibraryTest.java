@@ -4,6 +4,9 @@
 package basiclibrary;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -27,7 +30,7 @@ class LibraryTest {
     }
     @Test public void testlowAvgFunction() {
         Library classUnderTest = new Library();
-        double result = classUnderTest.lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}});
-        assertEquals(result,0.6666666666666666);
+        String result = Arrays.toString(classUnderTest.lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}}));
+        assertEquals(result,Arrays.toString(new int[]{0, 0, 2}));
     }
 }

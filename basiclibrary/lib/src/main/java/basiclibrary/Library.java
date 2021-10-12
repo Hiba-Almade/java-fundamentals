@@ -11,7 +11,7 @@ public class Library {
         System.out.println(Arrays.toString(roll(4)));
         System.out.println(containsDuplicates(new int[]{1,2, 6, 4, 5,1}));
         System.out.println(calcAvg(new int[]{6,2,1}));
-        System.out.println(lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}}));
+        System.out.println(Arrays.toString(lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}})));
     }
 
 // -----------------------------------Functions-----------------------------------------------//
@@ -53,7 +53,7 @@ public class Library {
     }
     /*lowAvg take an array of arrays calculates the average value for each
     array and return the array with the lowest average.*/
-    static double lowAvg(int[][]arr){
+    static int[] lowAvg(int[][]arr){
         // all index is a sub array
         double[]avgArr = new double[arr.length]; // array to store the avg for all sub array
 
@@ -67,12 +67,14 @@ public class Library {
         }
 
         double lowAvg=avgArr[0]; // initial value for the low number
+        int indexofLow = 0;
         for (int i=1; i<avgArr.length;i++){
             if(avgArr[i]<lowAvg){
                 lowAvg=avgArr[i]; // if any number less than the initial value it will be the lowAng
+                indexofLow = i;
             }
         }
-        return lowAvg;
+        return arr[indexofLow];
 
     }
 
