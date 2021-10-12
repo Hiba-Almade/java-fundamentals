@@ -5,6 +5,7 @@ package basiclibrary;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,5 +33,37 @@ class LibraryTest {
         Library classUnderTest = new Library();
         String result = Arrays.toString(classUnderTest.lowAvg(new int[][]{{0, 0, 2}, {3, 3, 3},{5,5,5,5},{1,1,1}}));
         assertEquals(result,Arrays.toString(new int[]{0, 0, 2}));
+    }
+    @Test public void testMonthTemplateFunction() {
+        Library classUnderTest = new Library();
+        String test = classUnderTest.monthTemplate(new int[][]{
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        });
+        String result = "High: 72\nLow: 51\nNever saw temperature: 63" +
+                "\nNever saw temperature: 67\nNever saw temperature: 68\nNever saw temperature: 69";
+
+        assertEquals(test, result);
+    }
+
+    @Test public void testTallyFunction() {
+        Library classUnderTest = new Library();
+        ArrayList<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String winner = classUnderTest.tally(votes);
+        String test= winner + " received the most votes!";
+        String result = "Bush received the most votes!";
+        assertEquals(test, result);
     }
 }
