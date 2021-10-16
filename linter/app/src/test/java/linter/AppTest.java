@@ -13,7 +13,7 @@ class AppTest {
     }
     @Test void errorTest() {
         App classUnderTest = new App();
-        String test = classUnderTest.findError("C:\\Users\\Hiba Almade\\Desktop\\java-fundamentals\\linter\\app\\src\\main\\resources\\gates.js");
+        String test = classUnderTest.findError("C:\\Users\\Hiba Almade\\Desktop\\java-fundamentals\\linter\\app\\src\\main\\resources\\getas.js");
         String result = "\nLine 3: Missing semicolon." +
                 "\nLine 5: Missing semicolon." +
                 "\nLine 11: Missing semicolon." +
@@ -91,6 +91,8 @@ class AppTest {
                 "\nLine 26: Missing semicolon." +
                 "\nLine 64: Missing semicolon." +
                 "\nLine 89: Missing semicolon.";
+        System.out.println(test);
+        System.out.println(result);
         assertEquals(test,result);
 
 
