@@ -24,7 +24,7 @@
 
 ***Basuclibrary / Library.java & LibraryTest.java***
 
-> it contain 4 methods
+> it's contain 4 methods
 
 * **roll:**  function accepts an integer n and rolls a six-sided dice n times.
   The method should return an array containing the values of the rolls.
@@ -40,13 +40,19 @@
 ### Lab 3 : **Maps, File I/O, and Testing**_12/10/2021
 
 
-***Basuclibrary / Library.java & LibraryTest.java***
+***Basiclibrary / Library.java & LibraryTest.java***
 
-> it contain 2 methods
+> it's contain 2 methods
 
 * **weatherTemplate:**  Using the October Seattle weather data above. Iterate through all of the data to find the min and max values. Use a HashSet of type Integer to keep track of all the unique temperatures seen. Finally, iterate from the min temp to the max temp and create a String containing any temperature 
 not seen during the month. Return that String.
 * **tally:** function that accepts a List of Strings representing votes and returns one string to show what got the most votes.
 
+***linter / App.java & AppTest.java***
+
+> it's contain 1 method 
+
+* **findError:**
+A method that reads a file with a given an error message whenever it finds a line that doesn't end in a semi-colon.
 ----------
 
