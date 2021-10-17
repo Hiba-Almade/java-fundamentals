@@ -1,13 +1,9 @@
 
 
-
-
-
-
 # java-fundamentals
 
 ## Repo for Labs of Java 401
-### Lab 1 :  **Java primitives and control flow** _ 10/10/2021
+### **Java primitives and control flow** _ 10/10/2021
 
 ***Basics / Main.java***
 
@@ -19,7 +15,7 @@
 
 -------
 
-### Lab 2 : **Arrays, for loops, testing**_11/10/2021
+### **Arrays, for loops, testing**_11/10/2021
 
 
 ***Basuclibrary / Library.java & LibraryTest.java***
@@ -37,7 +33,7 @@
 
 ----------
 
-### Lab 3 : **Maps, File I/O, and Testing**_12/10/2021
+### **Maps, File I/O, and Testing**_12/10/2021
 
 
 ***Basiclibrary / Library.java & LibraryTest.java***
@@ -55,4 +51,15 @@ not seen during the month. Return that String.
 * **findError:**
 A method that reads a file with a given an error message whenever it finds a line that doesn't end in a semi-colon.
 ----------
+
+### **Composition and Inheritance**_17/10/2021
+
+***inheritance / Restaurant.java & Review.java & LibraryTest.java***
+> it's contain 2 classes 
+
+* **Restaurant** class: Each Restaurant have a name, a number of stars and a price category.
+and it's include an **addReview** method.
+
+* **Review** class: Each Review have a body, an author, and a number of stars.
+
 
