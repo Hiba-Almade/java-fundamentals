@@ -5,16 +5,28 @@ package inheritance;
 
 public class Library {
     public static void main(String[] args) {
-        Restaurant restaurant = new Restaurant("res 1", 3);
-        System.out.println(restaurant.toString());
-        System.out.println("-----------------------------------");
-        restaurant.addReview("nice ", "Hiba" , 5);
-        System.out.println(restaurant.toString());
-        System.out.println("-----------------------------------");
-        restaurant.addReview("cute", "Rama" , 2);
-        restaurant.addReview("not good", "Suzan" , 1);
-        System.out.println(restaurant.toString());
-        System.out.println("-----------------------------------");
+//        Restaurant restaurant = new Restaurant("res 1", 3);
+//        System.out.println(restaurant.toString());
+//        System.out.println("-----------------------------------");
+//        restaurant.addReview("nice ", "Hiba" , 5);
+//        restaurant.addReview("nice ", "Hiba" , 5);
+//
+//        System.out.println(restaurant.toString());
+//        System.out.println("-----------------------------------");
+//        restaurant.addReview("cute", "Rama" , 2);
+//        restaurant.addReview("not good", "Suzan" , 1);
+//        System.out.println(restaurant.toString());
+//        System.out.println("-----------------------------------");
+
+        Theater theater = new Theater("test");
+        theater.addMovie("movie 1");
+        theater.addMovie("movie2");
+        //theater.removeMovie("movie2");
+        System.out.println(theater.toString());
+        theater.addReview("test","x",2,"movie");
+        System.out.println(theater.toString());
+
+
 
 
     }

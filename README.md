@@ -55,11 +55,17 @@ A method that reads a file with a given an error message whenever it finds a lin
 ### **Composition and Inheritance**_17/10/2021
 
 ***inheritance / Restaurant.java & Review.java & LibraryTest.java***
-> it's contain 2 classes 
+> it's contain 4 classes 
 
 * **Restaurant** class: Each Restaurant have a name, a number of stars and a price category.
 and it's include an **addReview** method.
 
 * **Review** class: Each Review have a body, an author, and a number of stars.
+
+* **Shop** class: Each Shop have a name, description, and number of dollar signs. 
+and it's include an **addReview** method.
+
+* **Theater** class: Each Theater  should have a name and all of the movies currently showing there. (Strings are fine for the movies; no need to create another class.)
+  and it's include an **addReview**, **addMovie** and **removeMovie**method.
 
 
