@@ -7,7 +7,7 @@ public class Restaurant implements ReviewsInterface{
     private int numOfStars ;
     private String price;
     private ArrayList<Review> reviewslist= new ArrayList<Review>();
-    private int allStars;
+    private int sum; // to find the avg of stars <Rate>
 
     public Restaurant(String name, int price) {
         this.name = name;
@@ -47,32 +47,21 @@ public class Restaurant implements ReviewsInterface{
         this.reviewslist = reviewslist;
     }
 
-    public int getAllStars() {
-        return allStars;
+    public int getSum() {
+        return sum;
     }
 
-    public void setAllStars(int allStars) {
-        this.allStars = allStars;
+    public void setSum(int sum) {
+        this.sum = sum;
     }
-
 
     @Override
     public void addReview(String body, String author, int stars) {
         Review newReview = new Review(body,author,stars);
         if(!this.reviewslist.contains(newReview)){
             reviewslist.add(newReview);
-            this.allStars+=newReview.getStars();
-            this.numOfStars=allStars/reviewslist.size();
-        }else {
-            System.out.println("this review already added");
-        }
-    }
-
-    public void addReview(Review review) {
-        if(!this.reviewslist.contains(review)){
-            reviewslist.add(review);
-            this.allStars+=review.getStars();
-            this.numOfStars=allStars/reviewslist.size();
+            this.sum+=newReview.getStars();
+            this.numOfStars=sum/reviewslist.size();
         }else {
             System.out.println("this review already added");
         }
