@@ -69,15 +69,11 @@ public class Restaurant implements ReviewsInterface{
 
     @Override
     public String toString() {
-        String result ="Restaurant name: "+this.name+
-                "\nRestaurant price: "+this.price+
-                "\nRestaurant Stars: "+this.numOfStars+
-                "\nRestaurant List: ";
-        for(Review review:reviewslist){
-            result+="\n"+review.toString();
-        }
-        return result;
+        return "Restaurant{" +
+                "name: '" + name + '\'' +
+                ", Rate: " + numOfStars +" stars"+
+                ", price: '" + price + '\'' +
+                ", reviews list: " + reviewslist +
+                '}';
     }
-
-
 }
