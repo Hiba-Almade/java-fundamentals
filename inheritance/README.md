@@ -1,39 +1,40 @@
 ## Composition and Inheritance
 
-### Step 1:
-* Create a class to represent a Restaurant. Each Restaurant should have a name, a number of stars and a price category.
 
-Implement a Restaurant **constructor** and **toString** method.
+* Create a class to represent a Restaurant. Each Restaurant have a name, a number of stars and a price category.
 
-* Create a class to represent a Review. Each Review should have a body, an author, and a number of stars.
+  Implement a Restaurant **constructor** and **toString** method.
+
+* Create a class to represent a Review. Each Review have a body, an author, and a number of stars.
  
-  `>` Implement a Review **constructor** and **toString** method.
+  Implement a Review **constructor** and **toString** method.
 
-* Add an instance method **addReview** to your Restaurant class. This method should take in a Review instance, and associate that review with this Restaurant.
+* Create a class to represent a Shop. Each Shop have a name, description, and number of dollar signs
+  
+  Implement a Restaurant **constructor** and **toString** method.
 
+* Create a class to represent a Theater. a Theater have a name and all the movies currently showing there.
+  
+  Implement a Review **constructor**, **toString**, **addMovie** and **removeMovie** method.
 
-When you associate a review with a restaurant, that restaurant’s star rating should change.
+* Add an instance method **addReview** to the Shop and Theater class.
+
+* create Review interface to insure all objects have `add review` property.
+
+`>>` When you associate a review with a restaurant, shop or theater, their star rating change.
 
 #### Testing:
 
-`>` Test that your Restaurant constructor is behaving reasonably.
+`>` Test if the constructor is behaving reasonably.
 
-`>` Test to create an instance of Restaurant and ensure that its toString is working properly.
+`>` Test and ensure that its toString is working properly.
 
 `>` Test to create an instance of Review and ensure that its toString is working properly.
 
-`>` Tests to ensure that when you call addReview, the association is created between the Restaurant and the Review.
+`>` Tests to ensure that when you call addReview, the association is created between the object and the Review.
 
-`>` Test update stars for the restaurant when you're adding new review.
+`>` Test update stars when we're adding new review.
 
-----
 
-### Step 2:
 
-Create a class to represent a Shop. Each Shop  should have a name, description, and number of dollar signs.
-Implement a Restaurant **constructor** and **toString** method.
 
-* Create a class to represent a Theater. a Theater should have a name and all of the movies currently showing there. (Strings are fine for the movies; no need to create another class.)
-  `>` Implement a Review **constructor**, **toString**, **addMovie** and **removeMovie** method.
-
-* Add an instance method **addReview** to your Shop and Theater class. 
